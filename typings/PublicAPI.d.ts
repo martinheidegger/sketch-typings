@@ -250,6 +250,16 @@ declare module 'sketch/dom' {
        * Mutating the returned array will update the document colors.
        */
       colors: IIOArray<ColorAsset, IColorAsset>;
+
+      /**
+       * The list of all shared text styles defined in the document.
+       * 
+       * Mutating the returned array will update the document styles.
+       */
+      sharedTextStyles: IIOArray<SharedStyle, {
+        name: string;
+        style: IStyle;
+      }>;
     }
 
     enum SaveMode {
